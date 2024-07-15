@@ -11,6 +11,7 @@ const Header = () => {
   };
   return (
     <header className='header'>
+      <h1>Hello</h1>
       <span className='username'>{tg.initDataUnsafe?.user?.username}</span>
       <Button close={close}>Close</Button>
     </header>
