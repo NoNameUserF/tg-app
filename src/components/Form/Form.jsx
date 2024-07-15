@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTelegram } from '../../hooks/useTelegram';
 import './index.css';
 export const Form = () => {
