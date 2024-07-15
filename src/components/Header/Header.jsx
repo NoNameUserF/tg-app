@@ -2,18 +2,15 @@ import React from 'react';
 
 import './index.css';
 
+import { useTelegram } from '../../hooks/useTelegram';
 import Button from '../Button/Button';
 const Header = () => {
-  const tg = window.Telegram.WebApp;
-
-  const close = () => {
-    tg.close();
-  };
+  const { close, user } = useTelegram();
   return (
     <header className='header'>
       <div className='wrapper'>
         <h1>Hello</h1>
-        <span className='username'>{tg.initDataUnsafe?.user?.username}</span>
+        <span className='username'>{user}</span>
         <Button close={close}>Close</Button>
       </div>
     </header>
