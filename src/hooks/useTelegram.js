@@ -5,9 +5,17 @@ export const useTelegram = () => {
     tg.close();
   };
 
+  const toggle = () => {
+    if (tg.MainButton.isVisible) {
+      tg.MainButton.hide();
+    } else {
+      tg.MainButton.show();
+    }
+  };
   return {
     tg: tg,
+    onToggle: toggle,
     onClose: close,
-    user: tg.initDateUnsafe?.user,
+    user: tg.initDataUnsafe?.user?.username,
   };
 };
