@@ -8,6 +8,6 @@ export const useTelegram = () => {
   return {
     tg: tg,
     onClose: close,
-    user: tg.initDateUnsafe?.user?.username,
+    user: tg.initDateUnsafe?.user,
   };
 };
