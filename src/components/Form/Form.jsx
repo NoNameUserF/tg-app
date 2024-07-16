@@ -12,9 +12,9 @@ export const Form = () => {
 
   const callback = useCallback(() => {
     const data = {
-      country,
-      city,
-      subject,
+      country: country,
+      city: city,
+      subject: subject,
     };
     tg.sendData(JSON.stringify(data));
   }, [country, city, subject]);
