@@ -6,7 +6,7 @@ import './index.css';
 export const Form = () => {
   const [country, setCountry] = useState('');
   const [city, setCity] = useState('');
-  const [subject, setSubject] = useState('physical');
+  const [subject, setSubject] = useState('');
 
   const { tg } = useTelegram();
 
