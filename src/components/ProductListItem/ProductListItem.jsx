@@ -12,6 +12,7 @@ const ProductListItem = ({ item }) => {
         <div>{item.price}</div>
         <div>{item.description}</div>
       </div>
+      <Button>Добавить в корзину</Button>
     </div>
   );
 };
