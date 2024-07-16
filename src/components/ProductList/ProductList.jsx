@@ -19,6 +19,7 @@ const ProductList = () => {
   const { tg } = useTelegram();
 
   const getCount = items => {
+    console.log(items);
     return items.reduce((acc, value) => {
       acc += value.price;
     }, 0);
@@ -28,10 +29,12 @@ const ProductList = () => {
 
     let newList = [];
     if (alreadyAdd) {
-      added.filter(item => item.id !== alreadyAdd.id);
+      newList = added.filter(asd => asd.id !== item.id);
     } else {
-      newList = [...newList, item];
+      newList = [...added, item];
     }
+
+    setAdded(newList);
 
     if (!newList.length) {
       tg.MainButton.hide();
@@ -42,6 +45,7 @@ const ProductList = () => {
       });
     }
   };
+
   return (
     <div className='list_container'>
       {products.map(item => (
