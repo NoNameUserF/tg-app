@@ -21,7 +21,7 @@ const ProductList = () => {
   const getCount = items => {
     console.log(items);
     return items.reduce((acc, value) => {
-      acc += value.price;
+      return (acc += value.price);
     }, 0);
   };
   const add = item => {
