@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button/Button';
 import './index.css';
-const ProductListItem = ({ item }) => {
+const ProductListItem = ({ item, add }) => {
   return (
     <div className='product_item'>
       <div className='wrapper'>
@@ -12,7 +12,7 @@ const ProductListItem = ({ item }) => {
         <div>{item.price}</div>
         <div>{item.description}</div>
       </div>
-      <Button>Добавить в корзину</Button>
+      <Button onClick={() => add(item)}>Добавить в корзину</Button>
     </div>
   );
 };
