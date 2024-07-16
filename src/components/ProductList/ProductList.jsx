@@ -20,7 +20,7 @@ const ProductList = () => {
 
   const getCount = items => {
     return items.reduce((acc, value) => {
-      return (acc += value);
+      acc += value.price;
     }, 0);
   };
   const add = item => {
