@@ -18,13 +18,17 @@ export const Form = () => {
   useEffect(() => {
     if (!city || !country) {
       tg.MainButton.hide();
+    } else {
+      tg.MainButton.show();
     }
   }, [country, city]);
 
   const onChangeCountry = e => {
+    console.log(country);
     setCountry(e.target.value);
   };
   const onChangeCity = e => {
+    console.log(city);
     setCity(e.target.value);
   };
   const onChangeSubject = e => {
