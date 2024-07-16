@@ -1,0 +1,7 @@
+.list_container {
+  display: flex;
+  gap: 12px;
+  max-width: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}

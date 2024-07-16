@@ -1,0 +1,19 @@
+import React from 'react';
+
+import './index.css';
+const ProductListItem = ({ item }) => {
+  return (
+    <div className='product_item'>
+      <div className='wrapper'>
+        <div className='product-list-id-title'>
+          <div>{item.id}</div>
+          <div style={{ whiteSpace: 'nowrap' }}>{item.title}</div>
+        </div>
+        <div>{item.price}</div>
+        <div>{item.description}</div>
+      </div>
+    </div>
+  );
+};
+
+export default ProductListItem;
