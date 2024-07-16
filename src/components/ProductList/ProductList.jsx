@@ -17,6 +17,12 @@ const ProductList = () => {
 
   const [added, setAdded] = useState([]);
   const { tg } = useTelegram();
+
+  const getCount = items => {
+    return items.reduce((acc, value) => {
+      return (acc += value);
+    }, 0);
+  };
   const add = item => {
     const alreadyAdd = added.find(add => add.id === item.id);
 
@@ -32,7 +38,7 @@ const ProductList = () => {
     } else {
       tg.MainButton.show();
       tg.MainButton.setParams({
-        text: 'Buy now',
+        text: 'Buy now' + getCount(newList),
       });
     }
   };
