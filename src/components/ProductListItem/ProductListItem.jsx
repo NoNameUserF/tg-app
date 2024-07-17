@@ -4,7 +4,7 @@ import './index.css';
 const ProductListItem = ({ item, add }) => {
   return (
     <div className='product_item'>
-      <div className='wrapper'>
+      <div className='list_wrapper'>
         <div className='product-list-id-title'>
           <div>{item.id}</div>
           <div style={{ whiteSpace: 'nowrap' }}>{item.title}</div>

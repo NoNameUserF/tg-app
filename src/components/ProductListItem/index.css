@@ -1,4 +1,6 @@
 .product_item {
+  flex-direction: column;
+  flex: 1 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +10,7 @@
   border-radius: 16px;
 }
 
-.wrapper {
+.list_wrapper {
   padding: 24px;
   display: flex;
   display: flex;
